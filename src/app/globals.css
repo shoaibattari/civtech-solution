@@ -1,50 +1,92 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --color-navy: #1b2a5e;
-  --color-navy-light: #243370;
-  --color-gold: #b8962e;
-  --color-gold-light: #d4b060;
-  --color-white: #ffffff;
-  --color-gray-light: #f5f5f0;
-  --color-gray-border: #e8e6df;
-  --color-text-muted: #6b6b6b;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --animate-fade-up: fade-up 0.6s ease-out;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+@theme {
+  /* Brand navy — 800 is the logo navy */
+  --color-navy-50: #f2f4fa;
+  --color-navy-100: #e3e8f4;
+  --color-navy-200: #c3cce6;
+  --color-navy-600: #34468a;
+  --color-navy-700: #243370;
+  --color-navy-800: #1b2a5e;
+  --color-navy-900: #121e47;
+  --color-navy-950: #0b1430;
+
+  /* Brand gold — 500 is the logo gold; use 700 for gold text on light backgrounds (AA contrast) */
+  --color-gold-50: #fbf7ea;
+  --color-gold-100: #f5ecce;
+  --color-gold-300: #e6cd8a;
+  --color-gold-400: #d4b060;
+  --color-gold-500: #b8962e;
+  --color-gold-600: #9c7d22;
+  --color-gold-700: #7d6418;
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+}
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@utility fade-mask {
+  mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-white);
+    color: var(--color-slate-900);
+  }
+
+  ::selection {
+    background: var(--color-gold-300);
+    color: var(--color-navy-950);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold-500);
+    outline-offset: 3px;
+  }
+
+  button,
+  [role="button"] {
+    cursor: pointer;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-button{
-  cursor: pointer;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

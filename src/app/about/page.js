@@ -1,166 +1,159 @@
-import React from "react";
-import { missionVision, values } from "../constant/data";
-import Link from "next/link";
+import { BadgeCheck, ShieldCheck } from "lucide-react";
+import CtaBanner from "@/components/CtaBanner";
+import PageHero from "@/components/PageHero";
+import SectionHeading from "@/components/SectionHeading";
+import { missionVision, values } from "@/lib/data";
+import { company } from "@/lib/site";
 
-const page = () => {
+export const metadata = {
+  title: "About Us",
+  description:
+    "Civtech Solution — derived from “Civil” and “Technical” — is a PEC C4 registered civil engineering, construction and project management company in Karachi.",
+  alternates: { canonical: "/about" },
+};
+
+export default function AboutPage() {
   return (
-    <main className="animate-fade-up">
-      {/* Hero */}
-      <section className="bg-[#1b2a5e] text-white pt-24">
-        <div className="mx-auto max-w-7xl px-6 py-24">
-          <p className="mb-4 text-sm text-slate-300">
-            <Link href="/">Home</Link> › About Us
-          </p>
-          <h1 className="text-5xl font-bold lg:text-7xl">
-            About <span className="text-amber-400">Civtech</span>
-          </h1>
+    <>
+      <PageHero
+        current="About"
+        eyebrow="Who we are"
+        title="About"
+        highlight="Civtech"
+        description="Derived from “Civil” and “Technical” — our name reflects our commitment to comprehensive civil, construction and technical excellence."
+      />
 
-          <p className="mt-6 max-w-3xl text-lg text-slate-300">
-            Derived from "Civil" and "Technical" — our name reflects our
-            commitment to comprehensive civil, construction, and technical
-            excellence.
-          </p>
-        </div>
-      </section>
-
-      {/* Company Overview */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="grid gap-12 lg:grid-cols-2">
-          <div className="relative rounded-3xl bg-slate-100 p-12">
-            <div className="text-7xl">🏗️</div>
-
-            <blockquote className="mt-8 text-3xl font-bold text-slate-800">
-              "We shape the future and redefine possibilities."
-            </blockquote>
-
-            <p className="mt-4 text-slate-600">
-              Founded with passion, driven by precision
-            </p>
-
-            <div className="absolute -bottom-6 -right-6 rounded-2xl bg-amber-500 px-8 py-6 text-center text-slate-900">
-              <div className="text-4xl font-bold">14+</div>
-              <div className="text-sm font-medium">YEARS EXPERIENCE</div>
+      {/* Overview */}
+      <section className="mx-auto max-w-7xl px-6 py-24 lg:py-32">
+        <div className="grid items-center gap-16 lg:grid-cols-2">
+          <div className="relative">
+            <div className="relative isolate overflow-hidden rounded-[2rem] bg-navy-900 p-10 text-white sm:p-14">
+              <div className="bg-grid absolute inset-0 -z-10" />
+              <div className="absolute -right-20 -top-20 -z-10 size-72 rounded-full bg-gold-500/20 blur-3xl" />
+              <blockquote className="text-3xl font-semibold leading-snug tracking-tight sm:text-4xl">
+                “We shape the future and redefine possibilities.”
+              </blockquote>
+              <p className="mt-6 text-slate-400">
+                Founded with passion, driven by precision.
+              </p>
+            </div>
+            <div className="absolute -bottom-8 right-6 rounded-3xl bg-gold-500 px-8 py-6 text-navy-950 shadow-xl sm:-right-6">
+              <p className="text-5xl font-bold tracking-tight">
+                {company.yearsExperience}+
+              </p>
+              <p className="mt-1 text-sm font-semibold uppercase tracking-wider">
+                Years experience
+              </p>
             </div>
           </div>
 
           <div>
-            <span className="text-sm font-semibold uppercase tracking-wider text-amber-600">
-              Our Story
-            </span>
-
-            <h2 className="mt-4 text-4xl font-bold text-slate-900">
-              Our Company Overview
-            </h2>
-
-            <div className="mt-4 h-1 w-24 bg-amber-500"></div>
-
-            <p className="mt-8 text-lg leading-relaxed text-slate-600">
+            <SectionHeading eyebrow="Our story" title="Company overview" />
+            <p className="mt-8 text-lg leading-relaxed text-slate-700">
               At Civtech Solution, we pride ourselves on delivering expertly
-              crafted solutions and smartly managed projects. We specialize in
-              construction services and project management, ensuring every
-              project is executed with precision, innovation, and a
-              client-focused approach.
+              crafted solutions and smartly managed projects. We specialise in
+              construction services and project management, executing every
+              project with precision, innovation and a client-focused approach.
             </p>
-
             <p className="mt-6 leading-relaxed text-slate-600">
-              The inspiration behind Civtech Solution lies in a deep passion for
-              managing complex projects, driven by a strong interest in project
-              management. The construction field has always been a major area of
-              interest, motivating the establishment of the company to fulfill
-              the dream of offering high-quality, efficient project solutions to
-              the industry.
+              The company grew out of a deep passion for managing complex
+              projects. Construction has always been at the heart of that
+              interest — Civtech was founded to bring high-quality, efficient
+              project delivery to the industry.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="bg-slate-50 py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-8 lg:grid-cols-2">
-            {missionVision.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-3xl border border-slate-200 border-t-4 border-t-amber-500 bg-white p-10"
+      {/* Mission & vision */}
+      <section className="bg-slate-50 py-24 lg:py-32">
+        <div className="mx-auto grid max-w-7xl gap-6 px-6 lg:grid-cols-2">
+          {missionVision.map((item) => {
+            const Icon = item.icon;
+            return (
+              <article
+                key={item.label}
+                className="rounded-[2rem] border border-slate-200 bg-white p-10 sm:p-12"
               >
-                <div className="mb-4 text-5xl">{item.icon}</div>
-
-                <span className="text-sm font-semibold uppercase tracking-wider text-amber-600">
-                  {item.label}
+                <span className="flex size-14 items-center justify-center rounded-2xl bg-gold-50 text-gold-700 ring-1 ring-gold-500/20">
+                  <Icon className="size-7" strokeWidth={1.75} aria-hidden />
                 </span>
-
-                <h3 className="mt-3 text-3xl font-bold text-[#1b2a5e]">
+                <p className="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-gold-700">
+                  {item.label}
+                </p>
+                <h2 className="mt-3 text-3xl font-bold tracking-tight text-navy-950">
                   {item.title}
-                </h3>
-
-                <p className="mt-6 leading-relaxed text-slate-600">
+                </h2>
+                <p className="mt-5 leading-relaxed text-slate-600">
                   {item.desc}
                 </p>
-              </div>
-            ))}
-          </div>
+              </article>
+            );
+          })}
         </div>
       </section>
 
-      {/* Core Values */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <p className="mt-12 text-sm text-slate-300">
-          <Link href="/">Home</Link> › About Us
-        </p>
-        <div className="mb-16 text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider text-amber-600">
-            What We Stand For
+      {/* Values */}
+      <section className="mx-auto max-w-7xl px-6 py-24 lg:py-32">
+        <SectionHeading
+          align="center"
+          eyebrow="What we stand for"
+          title="Our core values"
+        />
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {values.map((value) => {
+            const Icon = value.icon;
+            return (
+              <article
+                key={value.title}
+                className="group rounded-3xl border border-slate-200 p-8 transition duration-300 hover:border-navy-800 hover:bg-navy-800"
+              >
+                <Icon
+                  className="size-8 text-gold-600 transition group-hover:text-gold-400"
+                  strokeWidth={1.75}
+                  aria-hidden
+                />
+                <h3 className="mt-6 text-xl font-semibold text-navy-950 transition group-hover:text-white">
+                  {value.title}
+                </h3>
+                <p className="mt-3 leading-relaxed text-slate-600 transition group-hover:text-slate-300">
+                  {value.desc}
+                </p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* PEC certification */}
+      <section className="px-6">
+        <div className="mx-auto flex max-w-5xl flex-col items-start gap-8 rounded-[2rem] bg-gold-50 p-10 ring-1 ring-gold-500/20 sm:flex-row sm:p-14">
+          <span className="flex size-16 shrink-0 items-center justify-center rounded-2xl bg-navy-800 text-gold-400">
+            <ShieldCheck className="size-8" aria-hidden />
           </span>
-
-          <h2 className="mt-4 text-5xl font-bold">Our Core Values</h2>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {values.map((value) => (
-            <div
-              key={value.title}
-              className="rounded-3xl bg-[#1b2a5e] p-8 text-center"
-            >
-              <div className="mb-4 text-5xl">{value.icon}</div>
-
-              <h3 className="mb-4 text-2xl font-bold text-white">
-                {value.title}
-              </h3>
-
-              <p className="leading-relaxed text-slate-300">{value.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* PEC Certification */}
-      <section className="bg-slate-100 py-24">
-        <div className="mx-auto max-w-4xl px-6">
-          <div className="rounded-3xl border border-amber-500/20 bg-white p-12 text-center shadow-sm">
-            <span className="text-sm font-semibold uppercase tracking-wider text-amber-600">
-              Official Certification
-            </span>
-
-            <h2 className="mt-4 text-4xl font-bold text-[#1b2a5e]">
-              Pakistan Engineering Council (PEC) — C4 Category
-            </h2>
-
-            <p className="mt-6 leading-relaxed text-slate-600">
-              Civtech is registered with the Pakistan Engineering Council under
-              C4 Category, ensuring exceptional standards and reliable, high-end
-              civil engineering, construction, and consultancy services.
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold-700">
+              Official certification
             </p>
-
-            <p className="mt-4 leading-relaxed text-slate-600">
-              Licence No. 20691 — covering 12 specialization fields including
-              irrigation, general building works, and infrastructure
-              development.
+            <h2 className="mt-3 text-2xl font-bold tracking-tight text-navy-950 sm:text-3xl">
+              Pakistan Engineering Council — {company.pec.category} Category
+            </h2>
+            <p className="mt-4 leading-relaxed text-slate-700">
+              Civtech is registered with the Pakistan Engineering Council under
+              the {company.pec.category} category, assuring reliable,
+              high-standard civil engineering, construction and consultancy
+              services.
+            </p>
+            <p className="mt-4 inline-flex items-center gap-2 font-medium text-navy-800">
+              <BadgeCheck className="size-5 text-gold-600" aria-hidden />
+              Licence No. {company.pec.licence} · {company.pec.fields}{" "}
+              specialisation fields
             </p>
           </div>
         </div>
       </section>
-    </main>
-  );
-};
 
-export default page;
+      <CtaBanner />
+    </>
+  );
+}

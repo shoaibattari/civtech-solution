@@ -1,7 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./component/ui/Navbar";
-import Footer from "./component/ui/Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { SITE_URL, company } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,12 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Civtech Solution | Civil Engineering & Construction Company",
-    template: "Civtech Solution",
+    default: `${company.name} | Civil Engineering & Construction in Karachi`,
+    template: `%s | ${company.name}`,
   },
-  description:
-    "Civtech Solution is a leading civil engineering and construction company in Pakistan specializing in residential, commercial, industrial projects, EV charging infrastructure, fuel stations, and project management.",
+  description: company.description,
   keywords: [
     "civil engineering Pakistan",
     "construction company Karachi",
@@ -27,17 +28,23 @@ export const metadata = {
     "project management company",
     "fuel station construction",
     "industrial construction Pakistan",
+    "PEC C4 contractor",
   ],
-  authors: [{ name: "Civtech Solution" }],
-  // metadataBase: new URL("https://civtechsolution.com"),
+  authors: [{ name: company.name }],
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Civtech Solution",
-    description:
-      "Expertly Crafted, Smartly Managed Civil Engineering & Construction Services",
-    // url: "https://civtechsolution.com",
-    siteName: "Civtech Solution",
+    title: company.name,
+    description: `${company.tagline} — civil engineering & construction services.`,
+    url: "/",
+    siteName: company.name,
+    locale: "en_PK",
     type: "website",
   },
+  twitter: { card: "summary_large_image" },
+};
+
+export const viewport = {
+  themeColor: "#0b1430",
 };
 
 export default function RootLayout({ children }) {
@@ -46,9 +53,11 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="flex min-h-full flex-col font-sans">
         <Navbar />
-        {children}
+        <main id="main" className="flex-1">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
