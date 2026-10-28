@@ -1,5 +1,11 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Our Team",
+  description:
+    "Meet the engineers, architects and project managers behind Civtech Solution.",
+};
+
 const team = [
   {
     initials: "WA",
@@ -147,7 +153,7 @@ export default function TeamPage() {
               <div className="mt-4 h-1 w-24 bg-amber-500"></div>
 
               <p className="mt-8 text-lg leading-7 text-slate-600">
-                At Civtech Solution, we don't just build
+                At Civtech Solution, we don’t just build
                 structures — we shape the future and redefine
                 possibilities. With 14 years of relentless
                 dedication in civil engineering, my journey
@@ -158,10 +164,10 @@ export default function TeamPage() {
 
               <p className="mt-6 text-lg leading-7 text-slate-600">
                 Collaborating with global pioneers like Shell,
-                Siemens, General Electric & Aga Khan, I've
+                Siemens, General Electric & Aga Khan, I’ve
                 learned that greatness lies in precision,
                 innovation, and an unyielding commitment to
-                excellence. Together, let's push boundaries
+                excellence. Together, let’s push boundaries
                 and create a future we can all be proud of.
               </p>
 

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { projects, services } from "./constant/data";
 
-
 export default function HomePage() {
   return (
     <main>
@@ -21,7 +20,7 @@ export default function HomePage() {
               </h1>
 
               <p className="mt-6 max-w-xl text-lg text-slate-300">
-                Pakistan's premier civil engineering & construction company
+                Pakistan’s premier civil engineering & construction company
                 delivering transformative solutions across oil & gas, power,
                 industrial and residential sectors.
               </p>
@@ -93,8 +92,8 @@ export default function HomePage() {
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="rounded-3xl bg-slate-100 p-10">
             <blockquote className="text-2xl font-semibold">
-              "Every project is more than construction — it's a legacy in the
-              making."
+              “Every project is more than construction — it’s a legacy in the
+              making.”
             </blockquote>
 
             <p className="mt-4 text-slate-600">— Wajahat Ahmed, CEO</p>
@@ -192,7 +191,7 @@ export default function HomePage() {
           </h2>
 
           <p className="mt-6 text-slate-300">
-            Let's turn your vision into reality.
+            Let’s turn your vision into reality.
           </p>
 
           <Link

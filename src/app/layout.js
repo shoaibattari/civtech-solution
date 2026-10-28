@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: {
     default: "Civtech Solution | Civil Engineering & Construction Company",
-    template: "Civtech Solution",
+    template: "%s | Civtech Solution",
   },
   description:
     "Civtech Solution is a leading civil engineering and construction company in Pakistan specializing in residential, commercial, industrial projects, EV charging infrastructure, fuel stations, and project management.",

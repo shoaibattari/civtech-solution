@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
 
           <p className="mt-4 text-sm text-slate-300">
-            Pakistan's premier civil engineering & construction company.
+            Pakistan’s premier civil engineering & construction company.
             Building legacies, shaping futures.
           </p>
 
@@ -110,7 +110,6 @@ export default function Footer() {
               <a
                 href="tel:+923332088924"
                 className="transition hover:text-white"
-                target="_blank"
               >
                 +92-333-2088924
               </a>
@@ -119,7 +118,6 @@ export default function Footer() {
               <a
                 href="mailto:Info@civtechsolution.com"
                 className="transition hover:text-white"
-                target="_blank"
               >
                 Info@civtechsolution.com
               </a>
@@ -133,11 +131,12 @@ export default function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 px-6 py-6 text-sm text-slate-400 md:flex-row">
           <p>© 2026 Civtech Solution. All rights reserved.</p>
           <p>
-            Powered by:
+            Powered by:{" "}
             <a
               href="https://www.facebook.com/creatomationstudio"
               className="transition hover:text-white"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Creatomation Studio
             </a>

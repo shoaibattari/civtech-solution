@@ -1,4 +1,11 @@
 import Link from "next/link";
+import ContactForm from "./ContactForm";
+
+export const metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with Civtech Solution in Karachi for construction, project management and EV charging projects.",
+};
 
 export default function ContactPage() {
   const contactInfo = [
@@ -11,16 +18,19 @@ export default function ContactPage() {
       icon: "📞",
       label: "Phone Number",
       value: "+92-333-2088924",
+      href: "tel:+923332088924",
     },
     {
       icon: "📧",
       label: "Email Address",
       value: "Info@civtechsolution.com",
+      href: "mailto:Info@civtechsolution.com",
     },
     {
       icon: "📧",
       label: "CEO Direct",
       value: "Wajahat@civtechsolution.com",
+      href: "mailto:Wajahat@civtechsolution.com",
     },
   ];
 
@@ -86,9 +96,18 @@ export default function ContactPage() {
                       {item.label}
                     </p>
 
-                    <p className="text-lg font-medium text-slate-900">
-                      {item.value}
-                    </p>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        className="text-lg font-medium text-slate-900 transition hover:text-amber-700"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-lg font-medium text-slate-900">
+                        {item.value}
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}
@@ -118,84 +137,7 @@ export default function ContactPage() {
               Send Us a Message
             </h3>
 
-            <form className="space-y-5">
-              <div className="grid gap-4 md:grid-cols-2">
-                <div>
-                  <label className="text-sm font-medium text-slate-600">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Ahmed"
-                    className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-amber-400"
-                  />
-                </div>
-
-                <div>
-                  <label className="text-sm font-medium text-slate-600">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Khan"
-                    className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-amber-400"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="text-sm font-medium text-slate-600">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-amber-400"
-                />
-              </div>
-
-              <div>
-                <label className="text-sm font-medium text-slate-600">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  placeholder="+92-xxx-xxxxxxx"
-                  className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-amber-400"
-                />
-              </div>
-
-              <div>
-                <label className="text-sm font-medium text-slate-600">
-                  Project Type
-                </label>
-
-                <select className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-amber-400">
-                  {projectTypes.map((type) => (
-                    <option key={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <label className="text-sm font-medium text-slate-600">
-                  Project Details
-                </label>
-
-                <textarea
-                  rows={5}
-                  placeholder="Tell us about your project requirements, location, and timeline..."
-                  className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-amber-400"
-                />
-              </div>
-
-              <button
-                type="button"
-                className="w-full rounded-xl bg-amber-500 py-3 font-semibold text-[#1b2a5e] transition hover:bg-amber-400"
-              >
-                Send Message
-              </button>
-            </form>
+            <ContactForm projectTypes={projectTypes} />
           </div>
         </div>
       </section>

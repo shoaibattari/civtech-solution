@@ -2,6 +2,11 @@ import React from "react";
 import { allServices, } from "../constant/data";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Services",
+  description:
+    "Residential and commercial construction, project management, structural design, surveys, quantity estimation and EV charging infrastructure in Pakistan.",
+};
 
 const page = () => {
   return (

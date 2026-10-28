@@ -184,7 +184,7 @@ export const allProjects = [
     tag: "Hascol",
   },
   {
-    category: "Industrial Depot",
+    category: "Industrial",
     name: "Hascol Thallian Depot",
     loc: "Punjab",
     tag: "Hascol",
@@ -196,19 +196,19 @@ export const allProjects = [
     tag: "Pioneering",
   },
   {
-    category: "Fuel Station",
-    name: "Loonikot Filing Station",
+    category: "Retail Fuel Station",
+    name: "Loonikot Filling Station",
     loc: "M9 Motorway South Bound",
     tag: "Shell Pakistan",
   },
   {
-    category: "Fuel Station",
+    category: "Retail Fuel Station",
     name: "Highlang Filling Station",
     loc: "Bilal Chowrangi, Korangi Industrial",
     tag: "Shell Pakistan",
   },
   {
-    category: "Industrial Depot",
+    category: "Industrial",
     name: "Hascol Sahiwal Depot",
     loc: "Sahiwal, Punjab",
     tag: "Hascol",

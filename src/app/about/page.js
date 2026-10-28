@@ -2,6 +2,12 @@ import React from "react";
 import { missionVision, values } from "../constant/data";
 import Link from "next/link";
 
+export const metadata = {
+  title: "About Us",
+  description:
+    "Learn about Civtech Solution, a PEC C4 registered civil engineering and construction company in Karachi, Pakistan.",
+};
+
 const page = () => {
   return (
     <main className="animate-fade-up">
@@ -16,7 +22,7 @@ const page = () => {
           </h1>
 
           <p className="mt-6 max-w-3xl text-lg text-slate-300">
-            Derived from "Civil" and "Technical" — our name reflects our
+            Derived from “Civil” and “Technical” — our name reflects our
             commitment to comprehensive civil, construction, and technical
             excellence.
           </p>
@@ -30,14 +36,14 @@ const page = () => {
             <div className="text-7xl">🏗️</div>
 
             <blockquote className="mt-8 text-3xl font-bold text-slate-800">
-              "We shape the future and redefine possibilities."
+              “We shape the future and redefine possibilities.”
             </blockquote>
 
             <p className="mt-4 text-slate-600">
               Founded with passion, driven by precision
             </p>
 
-            <div className="absolute -bottom-6 -right-6 rounded-2xl bg-amber-500 px-8 py-6 text-center text-slate-900">
+            <div className="absolute -bottom-6 right-4 sm:-right-6 rounded-2xl bg-amber-500 px-8 py-6 text-center text-slate-900">
               <div className="text-4xl font-bold">14+</div>
               <div className="text-sm font-medium">YEARS EXPERIENCE</div>
             </div>
@@ -104,9 +110,6 @@ const page = () => {
 
       {/* Core Values */}
       <section className="mx-auto max-w-7xl px-6 py-24">
-        <p className="mt-12 text-sm text-slate-300">
-          <Link href="/">Home</Link> › About Us
-        </p>
         <div className="mb-16 text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-amber-600">
             What We Stand For
