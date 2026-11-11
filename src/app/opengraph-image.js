@@ -16,7 +16,7 @@ export default function Image() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 80,
-          background: "linear-gradient(135deg, #0b1430 0%, #1b2a5e 100%)",
+          background: "linear-gradient(135deg, #050d21 0%, #101f49 100%)",
           color: "white",
         }}
       >
@@ -25,7 +25,7 @@ export default function Image() {
             display: "flex",
             fontSize: 28,
             letterSpacing: 6,
-            color: "#d4b060",
+            color: "#f2bc38",
           }}
         >
           CIVTECH SOLUTION
@@ -39,7 +39,7 @@ export default function Image() {
               fontSize: 84,
               fontWeight: 700,
               lineHeight: 1.05,
-              color: "#d4b060",
+              color: "#f2bc38",
             }}
           >
             Smartly managed.

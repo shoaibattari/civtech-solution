@@ -6,8 +6,9 @@ import { company, navLinks } from "@/lib/site";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-navy-950 text-slate-300">
-      <div className="pointer-events-none absolute -top-40 left-1/2 h-80 w-[60rem] -translate-x-1/2 rounded-full bg-navy-700/30 blur-3xl" />
+    <footer className="relative overflow-hidden border-t border-white/10 bg-navy-975 text-slate-300">
+      <div className="bg-blueprint absolute inset-0 opacity-35" />
+      <div className="pointer-events-none absolute -top-40 left-1/2 h-80 w-[60rem] -translate-x-1/2 rounded-full bg-navy-600/25 blur-3xl" />
 
       <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2 lg:grid-cols-12">
         <div className="lg:col-span-4">
@@ -15,7 +16,7 @@ export default function Footer() {
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-slate-400">
             {company.description}
           </p>
-          <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-gold-500/30 bg-gold-500/10 px-4 py-1.5 text-xs font-medium text-gold-300">
+          <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-gold-400/30 bg-gold-400/10 px-4 py-1.5 text-xs font-medium text-gold-300">
             <ShieldCheck className="size-4" aria-hidden />
             PEC {company.pec.category} Registered · Licence{" "}
             {company.pec.licence}
@@ -23,7 +24,7 @@ export default function Footer() {
         </div>
 
         <nav aria-label="Footer" className="lg:col-span-2">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-gold-400">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-gold-300">
             Company
           </h2>
           <ul className="mt-5 space-y-3 text-sm">
@@ -38,7 +39,7 @@ export default function Footer() {
         </nav>
 
         <div className="lg:col-span-3">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-gold-400">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-gold-300">
             Services
           </h2>
           <ul className="mt-5 space-y-3 text-sm">
@@ -56,7 +57,7 @@ export default function Footer() {
         </div>
 
         <div className="lg:col-span-3">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-gold-400">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-gold-300">
             Get in touch
           </h2>
           <ul className="mt-5 space-y-4 text-sm">
@@ -107,7 +108,7 @@ export default function Footer() {
       </div>
 
       <div className="relative border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-6 text-xs text-slate-500 md:flex-row md:items-center md:justify-between">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-6 text-xs text-slate-400 md:flex-row md:items-center md:justify-between">
           <p>
             © {new Date().getFullYear()} {company.name}. All rights reserved.
           </p>
@@ -117,7 +118,7 @@ export default function Footer() {
               href="https://www.facebook.com/creatomationstudio"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 transition hover:text-white"
+              className="text-slate-300 transition hover:text-white"
             >
               Creatomation Studio
             </a>

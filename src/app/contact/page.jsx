@@ -54,6 +54,7 @@ export default function ContactPage() {
         title="Let’s build something"
         highlight="together"
         description="We welcome enquiries for new projects and collaborations. Send us the details and we’ll respond within one business day."
+        image="/images/hero-contact.jpg"
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24">
@@ -71,9 +72,9 @@ export default function ContactPage() {
                       target: "_blank",
                       rel: "noopener noreferrer",
                     })}
-                    className="group flex items-center gap-5 rounded-2xl border border-slate-200 p-5 transition hover:border-gold-500/50 hover:shadow-lg hover:shadow-navy-900/5"
+                    className="group flex items-center gap-5 rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm transition hover:border-gold-400/60 hover:shadow-lg hover:shadow-navy-900/5"
                   >
-                    <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-navy-50 text-navy-800 transition group-hover:bg-navy-800 group-hover:text-gold-400">
+                    <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-navy-50 text-navy-800 transition group-hover:bg-navy-975 group-hover:text-gold-300">
                       <Icon className="size-5" aria-hidden />
                     </span>
                     <span className="min-w-0 flex-1">

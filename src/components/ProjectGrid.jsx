@@ -34,15 +34,15 @@ export default function ProjectGrid() {
               aria-pressed={active}
               className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition ${
                 active
-                  ? "bg-navy-800 text-white shadow-lg shadow-navy-800/20"
-                  : "bg-white text-slate-700 ring-1 ring-slate-200 hover:ring-gold-500"
+                  ? "bg-navy-975 text-white shadow-lg shadow-navy-950/20"
+                  : "bg-white text-slate-700 ring-1 ring-slate-200 hover:ring-gold-400"
               }`}
             >
               {category}
               <span
                 className={`rounded-full px-2 py-0.5 text-xs ${
                   active
-                    ? "bg-gold-500 text-navy-950"
+                    ? "bg-gold-400 text-navy-975"
                     : "bg-slate-100 text-slate-600"
                 }`}
               >

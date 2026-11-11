@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
 import { buttonClass } from "./ui";
@@ -9,9 +10,17 @@ export default function CtaBanner({
 }) {
   return (
     <section className="px-6 py-24">
-      <div className="relative isolate mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-navy-900 px-8 py-16 text-center sm:px-16 lg:py-20">
-        <div className="bg-grid fade-mask absolute inset-0 -z-10" />
-        <div className="absolute -bottom-24 left-1/2 -z-10 h-64 w-[40rem] -translate-x-1/2 rounded-full bg-gold-500/25 blur-3xl" />
+      <div className="relative isolate mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-white/10 bg-navy-975 px-8 py-16 text-center shadow-2xl shadow-navy-950/20 sm:px-16 lg:py-20">
+        <Image
+          src="/images/about-engineering.jpg"
+          alt=""
+          fill
+          sizes="(max-width: 1280px) 100vw, 1280px"
+          className="-z-20 object-cover opacity-20"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-navy-975/92 via-navy-950/88 to-navy-900/90" />
+        <div className="bg-blueprint fade-mask absolute inset-0 -z-10 opacity-70" />
+        <div className="absolute -bottom-24 left-1/2 -z-10 h-64 w-[40rem] -translate-x-1/2 rounded-full bg-gold-400/22 blur-3xl" />
 
         <h2 className="mx-auto max-w-3xl text-3xl font-bold tracking-tight text-white sm:text-5xl">
           {title}

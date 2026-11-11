@@ -22,6 +22,7 @@ export const services = [
   {
     slug: "residential-construction",
     icon: House,
+    accent: "cyan",
     title: "Residential Construction",
     desc: "From custom homes to renovations, we create spaces that reflect our clients’ unique lifestyles.",
     tags: ["Custom Homes", "Renovation"],
@@ -30,30 +31,36 @@ export const services = [
   {
     slug: "commercial-construction",
     icon: Building2,
+    accent: "blue",
     title: "Commercial Construction",
-    desc: "Offices, retail and industrial facilities built to the exact needs of the business that will run them.",
+    desc: "Expertise in building offices, retail & industrial facilities tailored to meet business needs.",
     tags: ["Offices", "Industrial", "Retail"],
     featured: true,
   },
   {
     slug: "project-management",
     icon: ClipboardList,
+    accent: "amber",
     title: "Project Management",
-    desc: "Comprehensive oversight that keeps every project on schedule and within budget.",
+    desc: "Comprehensive oversight ensures projects are completed on time and within budget.",
     tags: ["End-to-End", "On-Site Supervision"],
     featured: true,
   },
   {
     slug: "ev-charging-infrastructure",
     icon: Zap,
+    accent: "emerald",
     title: "EV Charging Infrastructure",
     desc: "Developer of Pakistan’s first commercial DC fast charging station, with solar canopies and retail integration.",
+    heroDesc:
+      "Developer of Pakistan’s first commercial DC fast charging station.",
     tags: ["DC Fast Charging", "Solar", "EV"],
     featured: true,
   },
   {
     slug: "renovation-remodeling",
     icon: Hammer,
+    accent: "amber",
     title: "Renovation & Remodeling",
     desc: "Transforming existing spaces into modern, functional areas that improve usability and aesthetics.",
     tags: ["Modern Upgrades", "Interiors"],
@@ -61,6 +68,7 @@ export const services = [
   {
     slug: "structural-architectural-design",
     icon: Ruler,
+    accent: "blue",
     title: "Structural & Architectural Design",
     desc: "Detailed structural and architectural designs that meet code and are efficient to build.",
     tags: ["Structural", "Architectural"],
@@ -68,6 +76,7 @@ export const services = [
   {
     slug: "mechanical-works",
     icon: Cog,
+    accent: "cyan",
     title: "Mechanical Works",
     desc: "Pre-fab structures, canopies, shades and pipeline systems delivered with quality and precision.",
     tags: ["Pre-Fab", "Pipelines", "Canopies"],
@@ -75,6 +84,7 @@ export const services = [
   {
     slug: "engineering-surveys",
     icon: ScanLine,
+    accent: "emerald",
     title: "Engineering Surveys",
     desc: "Topographic and as-built surveys with contour mapping and levelling plans.",
     tags: ["Topographic", "As-Built"],
@@ -82,6 +92,7 @@ export const services = [
   {
     slug: "quantity-estimation",
     icon: Calculator,
+    accent: "amber",
     title: "Quantity Estimation",
     desc: "Project estimates covering interior and structural quantity evaluations.",
     tags: ["Interior QS", "Structural QS"],
@@ -96,6 +107,7 @@ export const projects = [
     category: "Fuel Stations",
     location: "Khayaban-e-Bahria, DHA Karachi",
     client: "Shell Pakistan",
+    image: "/images/project-fuel-station.jpg",
     featured: true,
   },
   {
@@ -103,6 +115,7 @@ export const projects = [
     category: "Fuel Stations",
     location: "Shahrah-e-Faisal, near Jinnah Airport, Karachi",
     client: "Shell Pakistan",
+    image: "/images/project-fuel-station.jpg",
     featured: true,
   },
   {
@@ -110,6 +123,7 @@ export const projects = [
     category: "EV Charging",
     location: "DHA Karachi",
     client: "Pioneering project",
+    image: "/images/project-ev-charging.jpg",
     featured: true,
   },
   {
@@ -118,36 +132,42 @@ export const projects = [
     location: "Shahrah-e-Faisal, Karachi",
     client: "Shell Pakistan",
     highlight: "First recycled station",
+    image: "/images/project-fuel-station.jpg",
   },
   {
     name: "Loonikot Filling Station",
     category: "Fuel Stations",
     location: "M-9 Motorway, southbound",
     client: "Shell Pakistan",
+    image: "/images/project-fuel-station.jpg",
   },
   {
     name: "Highlang Filling Station",
     category: "Fuel Stations",
     location: "Bilal Chowrangi, Korangi Industrial Area",
     client: "Shell Pakistan",
+    image: "/images/project-fuel-station.jpg",
   },
   {
     name: "Hascol Lube Blending Plant",
     category: "Industrial",
     location: "Base oil tanks & blending kettles",
     client: "Hascol",
+    image: "/images/project-industrial-depot.jpg",
   },
   {
     name: "Hascol Thallian Depot",
     category: "Industrial",
     location: "Punjab",
     client: "Hascol",
+    image: "/images/project-industrial-depot.jpg",
   },
   {
     name: "Hascol Sahiwal Depot",
     category: "Industrial",
     location: "Sahiwal, Punjab",
     client: "Hascol",
+    image: "/images/project-industrial-depot.jpg",
   },
 ];
 

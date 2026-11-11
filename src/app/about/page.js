@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { BadgeCheck, ShieldCheck } from "lucide-react";
 import CtaBanner from "@/components/CtaBanner";
 import PageHero from "@/components/PageHero";
@@ -21,23 +22,31 @@ export default function AboutPage() {
         title="About"
         highlight="Civtech"
         description="Derived from “Civil” and “Technical” — our name reflects our commitment to comprehensive civil, construction and technical excellence."
+        image="/images/about-engineering.jpg"
       />
 
       {/* Overview */}
       <section className="mx-auto max-w-7xl px-6 py-24 lg:py-32">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div className="relative">
-            <div className="relative isolate overflow-hidden rounded-[2rem] bg-navy-900 p-10 text-white sm:p-14">
-              <div className="bg-grid absolute inset-0 -z-10" />
-              <div className="absolute -right-20 -top-20 -z-10 size-72 rounded-full bg-gold-500/20 blur-3xl" />
-              <blockquote className="text-3xl font-semibold leading-snug tracking-tight sm:text-4xl">
+            <div className="relative isolate overflow-hidden rounded-[2rem] border border-white/10 bg-navy-975 p-10 text-white shadow-2xl sm:p-14">
+              <Image
+                src="/images/about-engineering.jpg"
+                alt=""
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="-z-20 object-cover opacity-35"
+              />
+              <div className="absolute inset-0 -z-10 bg-gradient-to-t from-navy-975 via-navy-975/80 to-navy-975/50" />
+              <div className="bg-blueprint absolute inset-0 -z-10 opacity-45" />
+              <blockquote className="pt-12 text-3xl font-semibold leading-snug tracking-tight sm:text-4xl">
                 “We shape the future and redefine possibilities.”
               </blockquote>
-              <p className="mt-6 text-slate-400">
+              <p className="mt-6 text-slate-300">
                 Founded with passion, driven by precision.
               </p>
             </div>
-            <div className="absolute -bottom-8 right-6 rounded-3xl bg-gold-500 px-8 py-6 text-navy-950 shadow-xl sm:-right-6">
+            <div className="absolute -bottom-8 right-6 rounded-3xl bg-gradient-to-br from-gold-300 via-gold-400 to-gold-500 px-8 py-6 text-navy-975 shadow-[0_16px_38px_-6px_rgba(242,188,56,0.5)] sm:-right-6">
               <p className="text-5xl font-bold tracking-tight">
                 {company.yearsExperience}+
               </p>
@@ -66,14 +75,14 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & vision */}
-      <section className="bg-slate-50 py-24 lg:py-32">
+      <section className="bg-slate-50 bg-dot-surface py-24 lg:py-32">
         <div className="mx-auto grid max-w-7xl gap-6 px-6 lg:grid-cols-2">
           {missionVision.map((item) => {
             const Icon = item.icon;
             return (
               <article
                 key={item.label}
-                className="rounded-[2rem] border border-slate-200 bg-white p-10 sm:p-12"
+                className="rounded-[2rem] border border-slate-200/90 bg-white p-10 shadow-sm sm:p-12"
               >
                 <span className="flex size-14 items-center justify-center rounded-2xl bg-gold-50 text-gold-700 ring-1 ring-gold-500/20">
                   <Icon className="size-7" strokeWidth={1.75} aria-hidden />
@@ -106,10 +115,10 @@ export default function AboutPage() {
             return (
               <article
                 key={value.title}
-                className="group rounded-3xl border border-slate-200 p-8 transition duration-300 hover:border-navy-800 hover:bg-navy-800"
+                className="group rounded-3xl border border-slate-200/90 bg-white p-8 shadow-sm transition duration-300 hover:border-navy-900 hover:bg-navy-975 hover:shadow-xl"
               >
                 <Icon
-                  className="size-8 text-gold-600 transition group-hover:text-gold-400"
+                  className="size-8 text-gold-600 transition group-hover:text-gold-300"
                   strokeWidth={1.75}
                   aria-hidden
                 />
@@ -127,8 +136,8 @@ export default function AboutPage() {
 
       {/* PEC certification */}
       <section className="px-6">
-        <div className="mx-auto flex max-w-5xl flex-col items-start gap-8 rounded-[2rem] bg-gold-50 p-10 ring-1 ring-gold-500/20 sm:flex-row sm:p-14">
-          <span className="flex size-16 shrink-0 items-center justify-center rounded-2xl bg-navy-800 text-gold-400">
+        <div className="mx-auto flex max-w-5xl flex-col items-start gap-8 rounded-[2rem] bg-gold-50 p-10 ring-1 ring-gold-500/25 sm:flex-row sm:p-14">
+          <span className="flex size-16 shrink-0 items-center justify-center rounded-2xl bg-navy-975 text-gold-300 shadow-lg">
             <ShieldCheck className="size-8" aria-hidden />
           </span>
           <div>

@@ -29,6 +29,7 @@ export default function ServicesPage() {
         title="Our"
         highlight="services"
         description="Comprehensive civil, construction and technical solutions — from residential builds to EV charging infrastructure."
+        image="/images/hero-services.jpg"
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24 lg:py-32">
@@ -40,8 +41,10 @@ export default function ServicesPage() {
       </section>
 
       {/* Modern structures */}
-      <section className="relative isolate overflow-hidden bg-navy-950 py-24 lg:py-32">
-        <div className="bg-grid fade-mask absolute inset-0 -z-10" />
+      <section className="relative isolate overflow-hidden bg-navy-975 py-24 lg:py-32">
+        <div className="bg-blueprint fade-mask absolute inset-0 -z-10 opacity-60" />
+        <div className="absolute -right-32 top-0 -z-10 size-96 rounded-full bg-gold-400/10 blur-3xl" />
+
         <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
           <div>
             <SectionHeading
@@ -57,7 +60,7 @@ export default function ServicesPage() {
                   className="flex items-center gap-3 text-slate-200"
                 >
                   <CircleCheck
-                    className="size-5 shrink-0 text-gold-400"
+                    className="size-5 shrink-0 text-gold-300"
                     aria-hidden
                   />
                   {feature}
@@ -70,10 +73,10 @@ export default function ServicesPage() {
             {sectors.map(({ name, icon: Icon }) => (
               <li
                 key={name}
-                className="flex flex-col items-center rounded-3xl border border-white/10 bg-white/[0.04] p-8 text-center transition hover:border-gold-500/40 hover:bg-white/[0.07] sm:p-10"
+                className="glass-row flex flex-col items-center rounded-3xl p-8 text-center backdrop-blur-md transition hover:border-gold-400/45 hover:bg-white/[0.08] sm:p-10"
               >
                 <Icon
-                  className="size-10 text-gold-400"
+                  className="size-10 text-gold-300"
                   strokeWidth={1.5}
                   aria-hidden
                 />

@@ -21,6 +21,7 @@ export default function ProjectsPage() {
         title="Our"
         highlight="projects"
         description="A portfolio of fuel stations, industrial facilities and EV infrastructure across Pakistan."
+        image="/images/hero-projects.jpg"
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24">
@@ -28,7 +29,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Industrial portfolio */}
-      <section className="bg-slate-50 py-24 lg:py-32">
+      <section className="bg-slate-50 bg-dot-surface py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <SectionHeading
             eyebrow="Industrial portfolio"
@@ -39,9 +40,9 @@ export default function ProjectsPage() {
             {industrialPortfolio.map((item) => (
               <li
                 key={`${item.name}-${item.scope}`}
-                className="flex items-center gap-5 rounded-2xl border border-slate-200 bg-white p-6"
+                className="flex items-center gap-5 rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm transition hover:border-gold-400/50 hover:shadow-lg hover:shadow-navy-900/5"
               >
-                <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-navy-800 text-gold-400">
+                <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-navy-975 text-gold-300">
                   <Factory className="size-6" strokeWidth={1.75} aria-hidden />
                 </span>
                 <span>

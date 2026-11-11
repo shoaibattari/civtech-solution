@@ -9,7 +9,7 @@ export default function Logo({ preload = false }) {
       className="group flex items-center gap-3"
       aria-label={`${company.name} — home`}
     >
-      <span className="relative size-11 shrink-0 overflow-hidden rounded-full ring-2 ring-gold-500 transition group-hover:ring-gold-400">
+      <span className="relative size-11 shrink-0 overflow-hidden rounded-full ring-2 ring-gold-400 shadow-[0_0_16px_rgba(242,188,56,0.22)] transition group-hover:ring-gold-300">
         <Image
           src="/logo.png"
           alt=""
@@ -23,7 +23,7 @@ export default function Logo({ preload = false }) {
         <span className="block text-[15px] font-bold tracking-wide text-white">
           CIVTECH SOLUTION
         </span>
-        <span className="block text-[11px] text-slate-400">
+        <span className="block text-[11px] text-slate-300/80">
           Expertly Crafted · Smartly Managed
         </span>
       </span>
